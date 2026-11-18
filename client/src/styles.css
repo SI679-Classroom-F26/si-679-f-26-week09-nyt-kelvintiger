@@ -12,6 +12,7 @@
      text color under a name of our own. */
   --text: var(--pico-color);
   --muted: var(--pico-muted-color);
+  --um-blue: #00274c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +23,8 @@
     --badge-fulfilled-bg: #0f3a22;
     --badge-out: #fca5a5;
     --badge-out-bg: #4a1414;
+    /* Navy disappears on a dark page; a lighter blue keeps the idea. */
+    --um-blue: #6b9bd8;
   }
 }
 
@@ -43,6 +46,16 @@
 .brand {
   font-size: 1.15rem;
   margin-right: 1rem;
+}
+
+/* U-M colors. Maize text gets a blue outline so it reads on light backgrounds. */
+.brand .maize {
+  color: #ffcb05;
+  -webkit-text-stroke: 0.5px var(--um-blue);
+}
+
+.brand .blue {
+  color: var(--um-blue);
 }
 
 nav button {
